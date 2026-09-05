@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brady Disla | WDD231</title>
+  <meta name="description" content="Course home page for WDD231 by Brady Disla - Web Frontend Development I">
+  <meta name="author" content="Brady Disla">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JavaScript (order matters: courses.js before course.js) -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="branding">
+      <img src="images/logo.svg" alt="Brady Disla logo" class="logo">
+      <span class="site-name">Brady Disla</span>
+    </div>
+    <button id="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="hamburger"></span>
+    </button>
+    <nav id="primary-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="chamber/index.html">Chamber</a></li>
+        <li><a href="final/index.html">Final</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Home</h1>
+
+    <section class="card about-me">
+      <div class="card-header">About Me</div>
+      <div class="card-body">
+        <div class="about-top">
+          <div class="about-text">
+            <p>My name is Brady Disla. I'm from the Dominican Republic, and I'm currently a student in the WDD 231 course, applying and building on the HTML, CSS, and JavaScript foundations from previous courses.</p>
+            <p>In my free time, I love reading and listening to music.</p>
+          </div>
+          <div class="photo-frame small">
+            <img src="images/profile-imagen.jpg" alt="Photo of Brady Disla" class="profile-photo">
+          </div>
+        </div>
+
+        <hr class="card-divider">
+
+        <div class="flag-fact">
+          <figure class="flag-figure">
+            <div class="flag-frame">
+              <img src="images/flag-rd.jpg" alt="Flag of the Dominican Republic" class="flag-photo">
+            </div>
+            <figcaption>Flag of the Dominican Republic</figcaption>
+          </figure>
+          <p>The Dominican Republic shares the island of Hispaniola with Haiti and is known for its beaches, merengue and bachata music, and rich Caribbean culture. It's a place I'm proud to call home.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card courses-card">
+      <div class="card-header">Web Certificate Courses</div>
+      <div class="card-body">
+        <div class="progress-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
+          </div>
+          <span id="progress-percent" class="progress-percent">0%</span>
+        </div>
+
+        <div class="filter-buttons">
+          <button id="btn-all" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button id="btn-wdd" class="filter-btn" data-filter="wdd" aria-pressed="false">WDD</button>
+          <button id="btn-cse" class="filter-btn" data-filter="cse" aria-pressed="false">CSE</button>
+        </div>
+
+        <div class="course-circles" id="course-cards"></div>
+
+        <hr class="card-divider">
+        <p class="credits-total">Total Credits (displayed): <span id="total-credits">0</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/bradydisla/wdd231" target="_blank" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1-.02-1.96-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .3.2.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/breidy_disla/" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39-.67.67-1.08 1.34-1.39 2.13-.3.76-.5 1.64-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13-.67-.67-1.34-1.08-2.13-1.39-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/>
+        </svg>
+      </a>
+    </div>
+    <p>&copy; <span id="currentyear"></span> Brady Disla | Dominican Republic</p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
