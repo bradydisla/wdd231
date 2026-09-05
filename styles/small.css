@@ -1,12 +1,12 @@
 :root {
   --color-primary: #0f4c5c;
-  --color-secondary: #e36414;
+  --color-secondary: #a84c0f;
   --color-accent: #9bc53d;
   --color-light: #f7f7f2;
   --color-dark: #16302b;
   --color-white: #ffffff;
   --font-heading: 'Poppins', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Poppins', sans-serif;
 }
 
 * {
@@ -24,6 +24,10 @@ body {
 
 h1, h2, .site-name {
   font-family: var(--font-heading);
+}
+
+button {
+  font-family: inherit;
 }
 
 img {
@@ -181,6 +185,7 @@ main h1 {
   font-size: 1.1rem;
   text-align: center;
   padding: 0.85rem 1rem;
+  margin: 0;
 }
 
 .card-body {
@@ -273,6 +278,16 @@ main h1 {
 
 .flag-fact p {
   font-size: 0.9rem;
+}
+
+/* Career Interests section */
+.career-card .card-body p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.career-card .card-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* Progress bar */
