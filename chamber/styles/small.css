@@ -227,7 +227,8 @@ button:focus-visible {
 /* -------------------- hero -------------------- */
 
 .page-intro {
-  background: linear-gradient(180deg, var(--color-navy-dark), var(--color-navy));
+  background-color: var(--color-navy-dark);
+  background-image: linear-gradient(180deg, var(--color-navy-dark), var(--color-navy));
   color: var(--color-cream);
   padding: 2em 1em 1.5em;
 }
