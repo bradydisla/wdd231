@@ -220,7 +220,7 @@ button:focus-visible {
 }
 
 .primary-nav a[aria-current="page"] {
-  color: var(--color-gold);
+  color: var(--color-gold-light);
   font-weight: 700;
 }
 
@@ -250,7 +250,7 @@ button:focus-visible {
 
 /* -------------------- main / directory -------------------- */
 
-main {
+.directory-wrapper {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 1.5em 1em 3em;
