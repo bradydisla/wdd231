@@ -439,6 +439,10 @@ button:focus-visible {
   flex: 1 1 auto;
 }
 
+#members-display.list .card-top img {
+  display: none;
+}
+
 #members-display.list .card-body {
   display: none;
 }
