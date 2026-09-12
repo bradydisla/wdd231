@@ -1,0 +1,92 @@
+{
+  "members": [
+    {
+      "name": "La Aurora Cigars",
+      "address": "Calle 30 de Marzo 34, Santiago de los Caballeros, DR",
+      "phone": "(809) 575-8000",
+      "website": "https://www.laauroracigars.com.do",
+      "image": "aurora-cigars.png",
+      "membership": 3,
+      "category": "Tobacco & Manufacturing",
+      "founded": 1903,
+      "description": "The Dominican Republic's oldest cigar maker, hand-rolling premium tobacco in the Cibao Valley since 1903."
+    },
+    {
+      "name": "Zona Franca Cibao Textiles",
+      "address": "Autopista Duarte Km 4, Santiago de los Caballeros, DR",
+      "phone": "(809) 583-2214",
+      "website": "https://www.zfcibaotextiles.com.do",
+      "image": "zona-franca-cibao.svg",
+      "membership": 3,
+      "category": "Textiles & Free Zone Manufacturing",
+      "founded": 1991,
+      "description": "A free-zone garment manufacturer exporting knitwear across the Caribbean and North America."
+    },
+    {
+      "name": "Café Cibao Roasters",
+      "address": "Calle del Sol 112, Santiago de los Caballeros, DR",
+      "phone": "(809) 226-4471",
+      "website": "https://www.cafecibaoroasters.com.do",
+      "image": "cafe-cibao.png",
+      "membership": 2,
+      "category": "Food & Beverage",
+      "founded": 2014,
+      "description": "Small-batch coffee roaster sourcing beans from Cibao Valley mountain farms."
+    },
+    {
+      "name": "Hotel Monumento Colonial",
+      "address": "Avenida Las Carreras 25, Santiago de los Caballeros, DR",
+      "phone": "(809) 971-3300",
+      "website": "https://www.hotelmonumentocolonial.com.do",
+      "image": "hotel-colonial.png",
+      "membership": 2,
+      "category": "Hospitality",
+      "founded": 1998,
+      "description": "Boutique hotel steps from the Monument to the Heroes of the Restoration."
+    },
+    {
+      "name": "Radio Cibao 98.5 FM",
+      "address": "Calle Restauracion 58, Santiago de los Caballeros, DR",
+      "phone": "(809) 582-9855",
+      "website": "https://www.radiocibaofm.com.do",
+      "image": "radio-cibao.png",
+      "membership": 2,
+      "category": "Media & Broadcasting",
+      "founded": 1976,
+      "description": "The Cibao region's longest-running merengue and news radio station."
+    },
+    {
+      "name": "Panaderia El Sol Naciente",
+      "address": "Calle Mella 47, Santiago de los Caballeros, DR",
+      "phone": "(809) 241-6693",
+      "website": "https://www.panaderiaelsolnaciente.com.do",
+      "image": "panaderia-sol.png",
+      "membership": 1,
+      "category": "Food & Beverage",
+      "founded": 2009,
+      "description": "Neighborhood bakery known for pan de agua and tres leches cake."
+    },
+    {
+      "name": "Ferreteria Cibao",
+      "address": "Avenida Juan Pablo Duarte 210, Santiago de los Caballeros, DR",
+      "phone": "(809) 583-1122",
+      "website": "https://www.ferreteriacibao.com.do",
+      "image": "ferre-cibao.png",
+      "membership": 1,
+      "category": "Retail & Hardware",
+      "founded": 1985,
+      "description": "Family-owned hardware store supplying tools and building materials to local contractors."
+    },
+    {
+      "name": "Instituto de Idiomas Cibao",
+      "address": "Calle Sabana Larga 8, Santiago de los Caballeros, DR",
+      "phone": "(809) 582-7740",
+      "website": "https://www.institutocibao.edu.do",
+      "image": "instituto-idiomas.jpg",
+      "membership": 1,
+      "category": "Education",
+      "founded": 2003,
+      "description": "Language school offering English and business-communication courses for professionals."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Member Directory | Camara de Comercio de Santiago</title>
+  <meta name="description" content="Browse member businesses of the Camara de Comercio de Santiago, the chamber of commerce serving Santiago de los Caballeros, Dominican Republic." />
+  <meta name="author" content="Brady Disla" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <meta property="og:title" content="Member Directory | Camara de Comercio de Santiago" />
+  <meta property="og:description" content="Browse member businesses of the Camara de Comercio de Santiago, the chamber of commerce serving Santiago de los Caballeros, Dominican Republic." />
+  <meta property="og:image" content="https://www.example.com/chamber/images/og-image.svg" />
+  <meta property="og:url" content="https://www.example.com/chamber/directory.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/chamber.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-flex">
+      <a class="brand" href="index.html">
+        <img src="images/chamber-logo.svg" alt="" width="44" height="44" />
+        <span class="brand-text">
+          <span class="brand-name">Camara de Comercio</span>
+          <span class="brand-tag">Santiago de los Caballeros</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Menu</span>
+        &#9776; Menu
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-intro">
+    <div class="page-intro-inner">
+      <h1>Member Directory</h1>
+      <p>Explore the businesses and organizations that power Santiago de los Caballeros' economy, from historic tobacco houses to local bakeries and free-zone manufacturers.</p>
+    </div>
+  </section>
+
+  <main id="main">
+    <div class="directory-controls">
+      <p>Members are shown with their current chamber membership level.</p>
+      <div class="view-toggle" role="group" aria-label="Directory view">
+        <button id="grid-view" type="button" aria-pressed="true">
+          <span aria-hidden="true">&#9638;&#9638;</span> Grid
+        </button>
+        <button id="list-view" type="button" aria-pressed="false">
+          <span aria-hidden="true">&#9776;</span> List
+        </button>
+      </div>
+    </div>
+
+    <div id="members-display" class="grid">
+      <p class="members-status">Loading member directory&hellip;</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-flex">
+      <div class="footer-contact">
+        <h2>Camara de Comercio de Santiago</h2>
+        <address>
+          Calle El Sol 45, Santiago de los Caballeros, Dominican Republic<br />
+          <a href="tel:+18095822200">(809) 582-2200</a><br />
+          <a href="mailto:info@camarasantiago.org.do">info@camarasantiago.org.do</a>
+        </address>
+        <ul class="social-links">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener" aria-label="X">x</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Brady Disla</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
