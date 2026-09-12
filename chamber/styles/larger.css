@@ -37,7 +37,7 @@
   }
 
   .primary-nav a[aria-current="page"] {
-    background: rgba(192, 138, 40, 0.15);
+    background: #343845;
   }
 
   .footer-flex {
