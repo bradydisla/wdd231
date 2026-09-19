@@ -52,6 +52,7 @@ html {
 :root {
   --color-navy: #1b2a4a;
   --color-navy-dark: #121d33;
+  --color-navy-highlight: #343845;
   --color-gold: #a97620;
   --color-gold-light: #e0b563;
   --color-terracotta: #b5482e;
@@ -466,7 +467,8 @@ button:focus-visible {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(18, 29, 51, 0.35), rgba(18, 29, 51, 0.88));
+  background-color: var(--color-navy-dark);
+  background-image: linear-gradient(180deg, rgba(18, 29, 51, 0.35), rgba(18, 29, 51, 0.88));
   color: var(--color-cream);
   display: flex;
   flex-direction: column;
