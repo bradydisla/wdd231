@@ -224,7 +224,7 @@ button:focus-visible {
   font-weight: 700;
 }
 
-/* -------------------- hero -------------------- */
+/* -------------------- hero (directory-style page intro) -------------------- */
 
 .page-intro {
   background-color: var(--color-navy-dark);
@@ -307,7 +307,7 @@ button:focus-visible {
   font-style: italic;
 }
 
-/* grid view */
+/* grid view (shared by the directory page and the home page spotlights) */
 
 #members-display.grid {
   display: grid;
@@ -449,6 +449,177 @@ button:focus-visible {
 
 #members-display.list .card-actions {
   margin-top: 0;
+}
+
+/* -------------------- hero (home page) -------------------- */
+
+.hero {
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(18, 29, 51, 0.35), rgba(18, 29, 51, 0.88));
+  color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25em 1em;
+  gap: 0.5em;
+}
+
+.hero-overlay h1 {
+  color: var(--color-white);
+  font-size: 1.6rem;
+  margin-bottom: 0.2em;
+}
+
+.hero-overlay p {
+  color: var(--color-cream-dark);
+  max-width: 46ch;
+  margin-bottom: 0.75em;
+}
+
+.cta-button {
+  align-self: flex-start;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  font-weight: 700;
+  padding: 0.65em 1.3em;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+  background: var(--color-gold-light);
+  text-decoration: none;
+}
+
+/* -------------------- home highlights: events + weather -------------------- */
+
+.home-highlights {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.highlight-col h2 {
+  font-size: 1.3rem;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9em;
+}
+
+.event-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-left: 6px solid var(--color-terracotta);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 0.9em 1em;
+}
+
+.event-date {
+  color: var(--color-terracotta);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.2em;
+}
+
+.event-card h3 {
+  font-size: 1.02rem;
+  margin-bottom: 0.2em;
+}
+
+.event-card p:last-child {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  margin-bottom: 0;
+}
+
+.weather-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1em;
+}
+
+.weather-status {
+  color: var(--color-slate);
+  font-style: italic;
+  margin: 0;
+}
+
+.weather-now {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+.weather-temp {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--color-navy);
+}
+
+.weather-desc {
+  color: var(--color-slate);
+  text-transform: capitalize;
+}
+
+.forecast-list {
+  display: flex;
+  gap: 0.75em;
+  border-top: 1px solid var(--color-cream-dark);
+  padding-top: 0.75em;
+}
+
+.forecast-day {
+  flex: 1;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.forecast-day .day-label {
+  font-weight: 700;
+  color: var(--color-navy);
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+/* -------------------- spotlights (home page) -------------------- */
+
+.spotlights-section {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 1em 3em;
+}
+
+.spotlights-section h2 {
+  font-size: 1.3rem;
+}
+
+.spotlights-section > p {
+  color: var(--color-slate);
+  margin-bottom: 1.25em;
 }
 
 /* -------------------- footer -------------------- */

@@ -10,6 +10,10 @@
   .page-intro h1 {
     font-size: 2.3rem;
   }
+
+  .hero-img {
+    height: 360px;
+  }
 }
 
 @media (min-width: 820px) {
@@ -55,6 +59,22 @@
     border-top: none;
     padding-top: 0;
     text-align: right;
+  }
+
+  .hero-img {
+    height: 440px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.1rem;
+  }
+
+  .home-highlights {
+    flex-direction: row;
+  }
+
+  .highlight-col {
+    flex: 1 1 50%;
   }
 }
 
