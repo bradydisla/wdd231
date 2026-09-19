@@ -52,40 +52,42 @@ async function getWeather() {
   }
 }
 
-// The free forecast endpoint returns data in 3-hour steps, not full
-// days, so this groups those steps by calendar date and keeps the
-// entry closest to noon as that day's representative forecast.
-function getDailyForecast(list) {
+// The free forecast endpoint returns data in 3-hour steps (UTC), not full
+// days. This converts each step to the city's local time using the offset
+// the API returns (seconds), groups the steps by local calendar date, and
+// keeps the entry closest to local noon as that day's forecast.
+function getDailyForecast(list, tzOffset) {
   const days = {};
 
   list.forEach((entry) => {
-    const [date, time] = entry.dt_txt.split(" ");
-    const hour = Number(time.split(":")[0]);
+    const local = new Date((entry.dt + tzOffset) * 1000).toISOString();
+    const date = local.slice(0, 10);
+    const hour = Number(local.slice(11, 13));
     const distanceFromNoon = Math.abs(hour - 12);
 
     if (!days[date] || distanceFromNoon < days[date].distanceFromNoon) {
-      days[date] = { entry, distanceFromNoon };
+      days[date] = { entry, date, distanceFromNoon };
     }
   });
 
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date(Date.now() + tzOffset * 1000).toISOString().slice(0, 10);
 
-  return Object.entries(days)
-    .filter(([date]) => date !== today)
-    .slice(0, 3)
-    .map(([, value]) => value.entry);
+  return Object.values(days)
+    .filter((day) => day.date !== today)
+    .slice(0, 3);
 }
 
 function displayWeather(current, forecast) {
   const temp = Math.round(current.main.temp);
   const description = current.weather[0].description;
-  const dailyForecast = getDailyForecast(forecast.list);
+  const dailyForecast = getDailyForecast(forecast.list, forecast.city.timezone);
 
   const forecastHTML = dailyForecast
-    .map((day) => {
-      const date = new Date(day.dt_txt.replace(" ", "T"));
-      const label = date.toLocaleDateString("en-US", { weekday: "short" });
-      const dayTemp = Math.round(day.main.temp);
+    .map(({ entry, date }) => {
+      const label = new Date(`${date}T12:00:00`).toLocaleDateString("en-US", {
+        weekday: "short",
+      });
+      const dayTemp = Math.round(entry.main.temp);
       return `
         <div class="forecast-day">
           <span class="day-label">${label}</span>
@@ -134,14 +136,23 @@ async function getSpotlights() {
   }
 }
 
+// Fisher-Yates shuffle (unbiased)
+function shuffle(items) {
+  const result = [...items];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
 // Gold (3) and Silver (2) members only, shuffled, showing 2 or 3 at random
 function pickSpotlights(members) {
   const eligible = members.filter(
     (member) => member.membership === 2 || member.membership === 3
   );
-  const shuffled = [...eligible].sort(() => Math.random() - 0.5);
   const count = Math.random() < 0.5 ? 2 : 3;
-  return shuffled.slice(0, count);
+  return shuffle(eligible).slice(0, count);
 }
 
 function displaySpotlights(members) {
@@ -157,7 +168,7 @@ function displaySpotlights(members) {
       <div class="card-top">
         <img src="images/${member.image}" alt="${member.name} logo" width="52" height="52" loading="lazy" />
         <div>
-          <h2>${member.name}</h2>
+          <h3>${member.name}</h3>
           <span class="badge" data-level="${member.membership}">${membershipLabels[member.membership]}</span>
         </div>
       </div>
@@ -166,8 +177,8 @@ function displaySpotlights(members) {
         <p>${member.phone}</p>
       </div>
       <div class="card-actions">
-        <a href="${member.website}" target="_blank" rel="noopener">Visit website</a>
-        <a href="tel:${member.phone.replace(/[^\d+]/g, "")}">Call</a>
+        <a href="${member.website}" target="_blank" rel="noopener" aria-label="Visit ${member.name} website">Visit website</a>
+        <a href="tel:${member.phone.replace(/[^\d+]/g, "")}" aria-label="Call ${member.name}">Call</a>
       </div>
     `;
 
