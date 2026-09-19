@@ -467,25 +467,32 @@ button:focus-visible {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--color-navy-dark);
-  background-image: linear-gradient(180deg, rgba(18, 29, 51, 0.35), rgba(18, 29, 51, 0.88));
-  color: var(--color-cream);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1.25em 1em;
+}
+
+.hero-caption {
+  align-self: flex-start;
+  max-width: 46ch;
+  background-color: var(--color-navy-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1em 1.25em;
+  display: flex;
+  flex-direction: column;
   gap: 0.5em;
 }
 
-.hero-overlay h1 {
+.hero-caption h1 {
   color: var(--color-white);
   font-size: 1.6rem;
   margin-bottom: 0.2em;
 }
 
-.hero-overlay p {
+.hero-caption p {
   color: var(--color-cream-dark);
-  max-width: 46ch;
   margin-bottom: 0.75em;
 }
 
