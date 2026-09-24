@@ -1,0 +1,9 @@
+Brady Disla Martinez
+Project Subject
+Love Coffee Shop
+
+Project Description
+Love Coffee Shop is a website for a small neighborhood coffee shop. Visitors will be able to browse a filterable menu, see today's specials, find the shop's location and hours, and send a pickup order request. The site will have four pages: Home, Menu, Order, and About & Contact.
+
+Reason and Purpose
+I chose this subject because someone very close to me owns a coffee shop, and I want to show them how much a website could help their business reach more customers. The purpose of the site is to give local residents, students, and remote workers an easy way to check the menu, find the shop, and plan a visit from their phones. It also lets me practice the course outcomes: valid and accessible HTML and CSS, a JSON menu, browser APIs such as Geolocation and localStorage, a weather API to suggest drinks, and performance testing with Lighthouse.
