@@ -85,6 +85,10 @@
     grid-template-columns: 3fr 2fr;
     align-items: start;
   }
+
+  /* On 820px+ the cards sit two-up beside the form (per join.html's
+     grid-template-columns above), so go back to a single column
+     here instead of the 2-up layout set at 640px. */
   .membership-cards {
     grid-template-columns: 1fr;
   }
