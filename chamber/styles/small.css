@@ -461,11 +461,6 @@ button:focus-visible {
 
 /* -------------------- hero (home page) -------------------- */
 
-/* The image is an absolutely positioned background layer; the caption
-   flows normally inside .hero, so .hero's height comes from the
-   caption's own content (with min-height as a floor). This means the
-   caption can never overflow past the image, at any viewport width or
-   text-wrap length: the box simply grows to fit it. */
 .hero {
   position: relative;
   min-height: 260px;
@@ -484,8 +479,6 @@ button:focus-visible {
   object-fit: cover;
 }
 
-/* Side padding follows the same 1120px content box as the header,
-   sections and footer, so everything shares one left edge. */
 .hero-overlay {
   padding-block: 1.25em;
   padding-inline: max(1em, calc((100% - var(--content-width)) / 2 + 1em));
@@ -714,4 +707,233 @@ button:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 0.3em;
+}
+
+/* =========================================================
+   join.html / thankyou.html — membership application page
+   (base / mobile-first rules; breakpoint overrides for these
+   are in larger.css)
+   ========================================================= */
+
+.join-wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.5em 1em 3em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+}
+
+.join-form {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5em;
+  display: grid;
+  gap: 1.1em;
+}
+
+.join-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.1em;
+}
+
+.join-form legend {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  padding: 0 0 0.4em;
+}
+
+.join-form label {
+  display: grid;
+  gap: 0.35em;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+  font: inherit;
+  font-weight: 400;
+  padding: 0.6em 0.7em;
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius);
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.join-form input:focus-visible,
+.join-form select:focus-visible,
+.join-form textarea:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+.join-form input:invalid:not(:placeholder-shown) {
+  border-color: var(--color-terracotta);
+}
+
+.join-form textarea {
+  resize: vertical;
+  min-height: 6em;
+}
+
+.field-hint {
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--color-slate);
+}
+
+.submit-btn {
+  justify-self: start;
+  border: none;
+}
+
+.membership-cards {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: 1fr;
+}
+
+.tier-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-top: 6px solid var(--tier-color, var(--color-slate));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.1em 1.2em;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: tier-in 0.5s ease forwards;
+}
+
+.tier-card:nth-of-type(1) { --tier-color: var(--color-navy); animation-delay: 0.05s; }
+.tier-card:nth-of-type(2) { --tier-color: var(--color-terracotta); animation-delay: 0.2s; }
+.tier-card:nth-of-type(3) { --tier-color: var(--color-slate); animation-delay: 0.35s; }
+.tier-card:nth-of-type(4) { --tier-color: var(--color-gold); animation-delay: 0.5s; }
+
+@keyframes tier-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tier-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.tier-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2em;
+}
+
+.tier-card .tier-price {
+  font-size: 0.85rem;
+  color: var(--color-slate);
+  margin-bottom: 0.6em;
+}
+
+.tier-card button.tier-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-terracotta);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tier-card button.tier-link:hover,
+.tier-card button.tier-link:focus-visible {
+  text-decoration: underline;
+}
+
+dialog.tier-modal {
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 32rem;
+  width: 90%;
+  padding: 0;
+}
+
+dialog.tier-modal::backdrop {
+  background: rgba(18, 29, 51, 0.6); /* --color-navy-dark, translucent */
+}
+
+.modal-inner {
+  padding: 1.75em;
+}
+
+.modal-inner h2 {
+  margin-top: 0;
+}
+
+.modal-inner ul {
+  margin: 0 0 1em;
+  display: grid;
+  gap: 0.5em;
+}
+
+.modal-inner li {
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.modal-inner li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+}
+
+.modal-close {
+  font-weight: 700;
+  background: var(--color-navy-dark);
+  color: var(--color-cream);
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.5em 1.2em;
+}
+
+.confirmation {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2em 1em 3em;
+}
+
+.confirmation dl {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25em 1.5em;
+  display: grid;
+  grid-template-columns: 10rem 1fr;
+  row-gap: 0.6em;
+}
+
+.confirmation dt {
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.confirmation dd {
+  margin: 0;
 }

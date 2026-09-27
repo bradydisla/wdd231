@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thank You | Camara de Comercio de Santiago | DR </title>
+  <meta name="description" content="Thank you for applying for membership with the Camara de Comercio de Santiago." />
+  <meta name="author" content="Brady Disla" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/thankyou.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-flex">
+      <a class="brand" href="index.html">
+        <img src="images/chamber-logo.svg" alt="" width="44" height="44" />
+        <span class="brand-text">
+          <span class="brand-name">Camara de Comercio</span>
+          <span class="brand-tag">Santiago de los Caballeros</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        &#9776; Menu
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="page-intro-inner">
+        <h1>Thank you for applying!</h1>
+        <p>We've received your membership application. Here's what you submitted:</p>
+      </div>
+    </section>
+
+    <section class="confirmation">
+      <dl>
+        <dt>First Name</dt>
+        <dd id="out-firstName"></dd>
+
+        <dt>Last Name</dt>
+        <dd id="out-lastName"></dd>
+
+        <dt>Email</dt>
+        <dd id="out-email"></dd>
+
+        <dt>Mobile Number</dt>
+        <dd id="out-mobile"></dd>
+
+        <dt>Business Name</dt>
+        <dd id="out-orgName"></dd>
+
+        <dt>Submitted On</dt>
+        <dd id="out-timestamp"></dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-flex">
+      <div class="footer-contact">
+        <h2>Camara de Comercio de Santiago</h2>
+        <address>
+          Calle El Sol 45, Santiago de los Caballeros, Dominican Republic<br />
+          <a href="tel:+18095822200">(809) 582-2200</a><br />
+          <a href="mailto:info@camarasantiago.org.do">info@camarasantiago.org.do</a>
+        </address>
+        <ul class="social-links">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener" aria-label="X">x</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Brady Disla</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
