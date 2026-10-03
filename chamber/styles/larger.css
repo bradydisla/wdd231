@@ -1,5 +1,5 @@
 /* =========================================================
-   Camara de Comercio de Santiago — larger viewport enhancements
+   Cámara de Comercio de Santiago — larger viewport enhancements
    ========================================================= */
 
 @media (min-width: 640px) {
@@ -33,12 +33,17 @@
       "item7 item8";
   }
 
-  /* image hover effect — only on screens that actually support hover, never on mobile */
+  /* reserve two lines for titles so photos in the same row start at the same height */
+  .discover-card h2 {
+    min-height: 2.4em;
+  }
+
+  /* image hover effect — larger views only, never in the mobile view */
   .discover-card figure img {
     transition: transform 0.3s ease, filter 0.3s ease;
   }
 
-  .discover-card:hover figure img {
+  .discover-card figure:hover img {
     transform: scale(1.06);
     filter: saturate(1.3);
   }

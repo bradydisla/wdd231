@@ -29,8 +29,23 @@ function slugify(name) {
     .replace(/(^-|-$)/g, "");
 }
 
+// Swap to the placeholder once if an image fails to load
+function addImageFallback(root) {
+  root.querySelectorAll("img").forEach((img) => {
+    img.addEventListener(
+      "error",
+      () => {
+        img.src = PLACEHOLDER_IMG;
+      },
+      { once: true }
+    );
+  });
+}
+
 function createCard(item, index) {
-  const modalId = `modal-${slugify(item.name)}-${index}`;
+  const slug = slugify(item.name);
+  const modalId = `modal-${slug}-${index}`;
+  const titleId = `title-${slug}-${index}`;
 
   const card = document.createElement("section");
   card.classList.add("discover-card");
@@ -44,7 +59,6 @@ function createCard(item, index) {
         width="300"
         height="200"
         loading="lazy"
-        onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}';"
       />
     </figure>
     <address>${item.address}</address>
@@ -55,15 +69,17 @@ function createCard(item, index) {
   const dialog = document.createElement("dialog");
   dialog.classList.add("tier-modal");
   dialog.id = modalId;
+  dialog.setAttribute("aria-labelledby", titleId);
   dialog.innerHTML = `
     <div class="modal-inner">
-      <h2>${item.name}</h2>
+      <h2 id="${titleId}">${item.name}</h2>
       <figure>
         <img
           src="images/${item.image}"
           alt="${item.name}"
+          width="300"
+          height="200"
           loading="lazy"
-          onerror="this.onerror=null;this.src='${PLACEHOLDER_IMG}';"
         />
       </figure>
       <address>${item.address}</address>
@@ -78,6 +94,9 @@ function createCard(item, index) {
       <button type="button" class="modal-close" autofocus>Close</button>
     </div>
   `;
+
+  addImageFallback(card);
+  addImageFallback(dialog);
 
   return { card, dialog };
 }
@@ -134,10 +153,23 @@ const visitMessageBox = document.querySelector("#visit-message");
 const visitMessageText = document.querySelector("#visit-message-text");
 const visitMessageClose = document.querySelector("#visit-message-close");
 
-function getVisitMessage() {
-  const now = Date.now();
-  const lastVisit = localStorage.getItem("lastVisit");
+function readLastVisit() {
+  try {
+    return localStorage.getItem("lastVisit");
+  } catch {
+    return null; // storage blocked (e.g. private mode)
+  }
+}
 
+function saveLastVisit(timestamp) {
+  try {
+    localStorage.setItem("lastVisit", timestamp.toString());
+  } catch {
+    // ignore: the message simply shows the first-visit text next time
+  }
+}
+
+function getVisitMessage(now, lastVisit) {
   if (!lastVisit) {
     return "Welcome! Let us know if you have any questions.";
   }
@@ -154,9 +186,10 @@ function getVisitMessage() {
   return `You last visited ${days} ${dayWord} ago.`;
 }
 
-visitMessageText.textContent = getVisitMessage();
+const now = Date.now();
+visitMessageText.textContent = getVisitMessage(now, readLastVisit());
 visitMessageBox.hidden = false;
-localStorage.setItem("lastVisit", Date.now().toString());
+saveLastVisit(now);
 
 visitMessageClose.addEventListener("click", () => {
   visitMessageBox.hidden = true;
