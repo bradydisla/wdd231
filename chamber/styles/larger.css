@@ -20,6 +20,30 @@
   }
 }
 
+/* -------------------- discover page: medium screens (641-1024px) -------------------- */
+
+@media (min-width: 641px) {
+  .discover-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "item1 item1"
+      "item2 item3"
+      "item4 item5"
+      "item6 item6"
+      "item7 item8";
+  }
+
+  /* image hover effect — only on screens that actually support hover, never on mobile */
+  .discover-card figure img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .discover-card:hover figure img {
+    transform: scale(1.06);
+    filter: saturate(1.3);
+  }
+}
+
 @media (min-width: 820px) {
   .nav-toggle {
     display: none;
@@ -85,10 +109,6 @@
     grid-template-columns: 3fr 2fr;
     align-items: start;
   }
-
-  /* On 820px+ the cards sit two-up beside the form (per join.html's
-     grid-template-columns above), so go back to a single column
-     here instead of the 2-up layout set at 640px. */
   .membership-cards {
     grid-template-columns: 1fr;
   }
@@ -101,5 +121,17 @@
 
   .page-intro {
     padding: 3em 1em 2em;
+  }
+}
+
+/* -------------------- discover page: large screens (1025px+) -------------------- */
+
+@media (min-width: 1025px) {
+  .discover-gallery {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "item1 item1 item2 item3"
+      "item4 item5 item6 item7"
+      "item8 item8 item8 item8";
   }
 }

@@ -642,6 +642,135 @@ button:focus-visible {
   margin-bottom: 1.25em;
 }
 
+/* -------------------- discover page -------------------- */
+
+.visit-message {
+  max-width: var(--content-width);
+  margin: 1em auto 0;
+  background: var(--color-gold-light);
+  color: var(--color-navy-dark);
+  border-radius: var(--radius);
+  padding: 0.75em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  font-weight: 600;
+}
+
+.visit-message p {
+  margin: 0;
+}
+
+.visit-message button {
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--color-navy-dark);
+}
+
+.discover-wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 1.5em 1em 3em;
+}
+
+.discover-gallery {
+  display: grid;
+  gap: 1.25em;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "item1"
+    "item2"
+    "item3"
+    "item4"
+    "item5"
+    "item6"
+    "item7"
+    "item8";
+}
+
+.discover-card:nth-of-type(1) {
+  grid-area: item1;
+}
+.discover-card:nth-of-type(2) {
+  grid-area: item2;
+}
+.discover-card:nth-of-type(3) {
+  grid-area: item3;
+}
+.discover-card:nth-of-type(4) {
+  grid-area: item4;
+}
+.discover-card:nth-of-type(5) {
+  grid-area: item5;
+}
+.discover-card:nth-of-type(6) {
+  grid-area: item6;
+}
+.discover-card:nth-of-type(7) {
+  grid-area: item7;
+}
+.discover-card:nth-of-type(8) {
+  grid-area: item8;
+}
+
+.discover-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-cream-dark);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.discover-card h2 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.discover-card figure {
+  margin: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.discover-card figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.discover-card address {
+  font-style: normal;
+  font-size: 0.85rem;
+  color: var(--color-slate);
+}
+
+.discover-card p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.discover-card .learn-more {
+  align-self: flex-start;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 600;
+  font-family: var(--font-body);
+  padding: 0.5em 1em;
+  border-radius: var(--radius);
+  border: none;
+}
+
+.discover-card .learn-more:hover,
+.discover-card .learn-more:focus-visible {
+  background: var(--color-navy-dark);
+}
+
 /* -------------------- footer -------------------- */
 
 .site-footer {
@@ -708,13 +837,6 @@ button:focus-visible {
   flex-direction: column;
   gap: 0.3em;
 }
-
-/* =========================================================
-   join.html / thankyou.html — membership application page
-   (base / mobile-first rules; breakpoint overrides for these
-   are in larger.css)
-   ========================================================= */
-
 .join-wrapper {
   max-width: var(--content-width);
   margin: 0 auto;

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Discover | Camara de Comercio de Santiago</title>
+  <meta name="description" content="Discover Santiago de los Caballeros — 8 places of interest in the city served by the Camara de Comercio de Santiago, Dominican Republic." />
+  <meta name="author" content="Brady Disla" />
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+
+  <meta property="og:title" content="Discover | Camara de Comercio de Santiago" />
+  <meta property="og:description" content="Discover Santiago de los Caballeros — 8 places of interest in the city served by the Camara de Comercio de Santiago, Dominican Republic." />
+  <meta property="og:image" content="https://bradydisla.github.io/wdd231/chamber/images/og-image.svg" />
+  <meta property="og:url" content="https://bradydisla.github.io/wdd231/chamber/discover.html" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-flex">
+      <a class="brand" href="index.html">
+        <img src="images/chamber-logo.svg" alt="" width="44" height="44" />
+        <span class="brand-text">
+          <span class="brand-name">Camara de Comercio</span>
+          <span class="brand-tag">Santiago de los Caballeros</span>
+        </span>
+      </a>
+
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+        <span class="visually-hidden">Menu</span>
+        &#9776; Menu
+      </button>
+
+      <nav class="primary-nav" id="primary-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html" aria-current="page">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="page-intro-inner">
+        <h1>Discover Santiago de los Caballeros</h1>
+        <p>Eight places that show why members, visitors, and new businesses fall in love with the Cibao Valley's historic capital.</p>
+      </div>
+    </section>
+
+    <div id="visit-message" class="visit-message" hidden>
+      <p id="visit-message-text"></p>
+      <button type="button" id="visit-message-close" aria-label="Dismiss message">&times;</button>
+    </div>
+
+    <div class="discover-wrapper">
+      <div id="discover-gallery" class="discover-gallery">
+        <p class="members-status">Loading places of interest&hellip;</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-flex">
+      <div class="footer-contact">
+        <h2>Camara de Comercio de Santiago</h2>
+        <address>
+          Calle El Sol 45, Santiago de los Caballeros, Dominican Republic<br />
+          <a href="tel:+18095822200">(809) 582-2200</a><br />
+          <a href="mailto:info@camarasantiago.org.do">info@camarasantiago.org.do</a>
+        </address>
+        <ul class="social-links">
+          <li><a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">f</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener" aria-label="X">x</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-meta">
+        <p>&copy; <span id="year"></span> Brady Disla</p>
+        <p>WDD 231 &mdash; Web Frontend Development I</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
