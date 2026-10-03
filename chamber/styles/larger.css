@@ -140,3 +140,11 @@
       "item8 item8 item8 item8";
   }
 }
+
+/* medium screens: wide cards (monument and theater) get more height so the photo isn't cropped too hard */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .discover-card:nth-of-type(1) figure img,
+  .discover-card:nth-of-type(6) figure img {
+    height: 320px;
+  }
+}

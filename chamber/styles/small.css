@@ -751,6 +751,11 @@ button:focus-visible {
   display: block;
 }
 
+/* show the top of the tower instead of cropping it */
+.discover-card:nth-of-type(1) figure img {
+  object-position: center top;
+}
+
 .discover-card address {
   font-style: normal;
   font-size: 0.85rem;
