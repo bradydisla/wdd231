@@ -7,14 +7,17 @@
   <meta name="description" content="Order ahead and pick it up ready at the Selah House counter.">
   <meta name="author" content="Brady Disla Martinez">
 
-  <meta property="og:title" content="Order Ahead | Selah House">
-  <meta property="og:description" content="Order ahead and pick it up ready at the counter.">
+  <meta property="og:title" content="Order Ahead for Pickup | Selah House Coffee Shop">
+  <meta property="og:description" content="Order ahead and pick up your drinks and food ready at the Selah House counter.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Selah House">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://bradydisla.github.io/wdd231/project/images/selah-house-logo.png">
   <meta property="og:url" content="https://bradydisla.github.io/wdd231/project/order.html">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/selah-house-monogram.png" type="image/png">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/large.css">
@@ -22,14 +25,14 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="wrapper header-inner">
       <img class="logo" src="images/selah-house-logo.png" alt="Selah House logo" width="72" height="72">
-      <h1>Place your order</h1>
+      <p class="site-name">Selah House</p>
     </div>
   </header>
 
   <nav class="site-nav" aria-label="Main">
-    <div class="container">
+    <div class="wrapper">
       <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Navigation menu"><span aria-hidden="true">☰</span></button>
       <ul id="nav-list" class="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -39,8 +42,8 @@
     </div>
   </nav>
 
-  <main class="container">
-    <h2>Pickup order</h2>
+  <main class="wrapper">
+    <h1>Place your order</h1>
 
     <div class="order-layout">
       <form class="form" action="form-thanks.html" method="get">
@@ -64,11 +67,11 @@
           <textarea id="notes" name="notes" maxlength="300"></textarea>
         </div>
 
-        <button type="submit" class="btn-primary">Send order</button>
+        <button type="submit" class="button-primary">Send order</button>
       </form>
 
       <aside class="order-info" aria-labelledby="how-title">
-        <h3 id="how-title">How it works</h3>
+        <h2 id="how-title">How it works</h2>
         <ol>
           <li>Fill in the form with your details and pickup time.</li>
           <li>Review the summary you see after sending.</li>
@@ -79,7 +82,7 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="wrapper footer-inner">
       <p>© <span id="current-year">2026</span> Brady Disla Martinez | Selah House</p>
       <p><a href="https://youtu.be/TU_ID_DE_VIDEO" target="_blank" rel="noopener">Project demonstration video</a> | <a href="attributions.html">Attributions</a></p>
     </div>

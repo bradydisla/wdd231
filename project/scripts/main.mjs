@@ -19,7 +19,7 @@ export function initCommonUI() {
 
   links.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
+      link.classList.add('current');
       link.setAttribute('aria-current', 'page');
     }
   });

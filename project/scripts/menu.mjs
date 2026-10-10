@@ -14,7 +14,7 @@ const VALID_FILTERS = ['all', 'coffee', 'tea', 'food', 'dairy-free'];
 
 const menuContainer = document.querySelector('#menu-cards');
 const resultCount = document.querySelector('#result-count');
-const filterButtons = document.querySelectorAll('.btn-filter');
+const filterButtons = document.querySelectorAll('.button-filter');
 const modal = document.querySelector('#item-modal');
 const modalContent = document.querySelector('#modal-content');
 const closeModal = document.querySelector('#close-modal');
@@ -56,7 +56,7 @@ function applyFilter(category) {
 
   filterButtons.forEach(btn => {
     const isActive = btn.dataset.category === category;
-    btn.classList.toggle('active', isActive);
+    btn.classList.toggle('selected', isActive);
     btn.setAttribute('aria-pressed', String(isActive));
   });
 
@@ -81,7 +81,7 @@ function openModal(id) {
 }
 
 menuContainer.addEventListener('click', event => {
-  const button = event.target.closest('.btn-detail');
+  const button = event.target.closest('.button-detail');
   if (button) {
     openModal(Number(button.dataset.id));
   }

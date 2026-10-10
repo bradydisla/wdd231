@@ -28,19 +28,19 @@ export function errorTemplate() {
   return `<p class="error" role="alert">We couldn't load the menu right now. Please try reloading the page.</p>`;
 }
 
-// Card template (template literals)
+// Menu item template (template literals)
 export function cardTemplate(item, withButton = false) {
   return `
-    <article class="card">
+    <article class="menu-item">
       <img src="${item.image}" alt="Photo of ${item.name}" loading="lazy" width="300" height="225">
-      <div class="card-body">
-        <h3 class="card-title">${item.name}</h3>
+      <div class="menu-item-body">
+        <h3 class="menu-item-title">${item.name}</h3>
         <p>${categoryLabels[item.category]}, ${temperatureLabel(item.temperature).toLowerCase()}</p>
-        <p class="card-price">$${item.price.toFixed(2)}</p>
+        <p class="menu-item-price">$${item.price.toFixed(2)}</p>
         <p>${item.dairyFree ? '🌱 Dairy-free' : '🥛 Contains dairy'}</p>
       </div>
       ${withButton
-        ? `<button type="button" class="btn-detail" data-id="${item.id}" aria-label="View details for ${item.name}">View details</button>`
+        ? `<button type="button" class="button-detail" data-id="${item.id}" aria-label="View details for ${item.name}">View details</button>`
         : ''}
     </article>
   `;

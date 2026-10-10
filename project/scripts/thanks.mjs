@@ -16,8 +16,8 @@ const fields = [
 
 if (!params.has('fname')) {
   // The page was opened without submitting the form
-  summaryList.hidden = true;
-  thanksText.hidden = true;
+  summaryList.remove();
+  thanksText.remove();
   emptyMessage.hidden = false;
 } else {
   fields.forEach(({ label, value }) => {
