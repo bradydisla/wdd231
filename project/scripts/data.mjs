@@ -32,7 +32,7 @@ export function errorTemplate() {
 export function cardTemplate(item, withButton = false) {
   return `
     <article class="menu-item">
-      <img src="${item.image}" alt="Photo of ${item.name}" loading="lazy" width="300" height="225">
+      <img src="${item.image}" alt="${item.name}" loading="lazy" width="300" height="225">
       <div class="menu-item-body">
         <h3 class="menu-item-title">${item.name}</h3>
         <p>${categoryLabels[item.category]}, ${temperatureLabel(item.temperature).toLowerCase()}</p>

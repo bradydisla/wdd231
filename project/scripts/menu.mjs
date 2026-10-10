@@ -69,7 +69,7 @@ function openModal(id) {
   if (!item) return;
 
   modalContent.innerHTML = `
-    <img src="${item.image}" alt="Photo of ${item.name}" width="300" height="225">
+    <img src="${item.image}" alt="${item.name}" width="300" height="225">
     <h2 id="modal-title">${item.name}</h2>
     <p><strong>Category:</strong> ${categoryLabels[item.category]}</p>
     <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
@@ -77,6 +77,9 @@ function openModal(id) {
     <p><strong>Dairy:</strong> ${item.dairyFree ? 'Dairy-free' : 'Contains dairy'}</p>
     <p>${item.description}</p>
   `;
+
+  // Name the dialog only once its title exists
+  modal.setAttribute('aria-labelledby', 'modal-title');
   modal.showModal();
 }
 

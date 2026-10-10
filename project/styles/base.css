@@ -63,7 +63,6 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
@@ -144,7 +143,8 @@ a {
   text-decoration: underline;
 }
 
-.nav-list a.current {
+/* Wayfinding: main.mjs sets aria-current="page" on the active link */
+.nav-list a[aria-current="page"] {
   background-color: var(--color-clay);
   color: var(--color-secondary);
   font-weight: bold;
@@ -157,7 +157,7 @@ a {
   outline-color: var(--color-clay);
 }
 
-.site-nav .nav-list a.current:focus-visible {
+.site-nav .nav-list a[aria-current="page"]:focus-visible {
   outline-color: var(--color-cream);
 }
 
@@ -220,7 +220,6 @@ main.wrapper {
 /* Home hero */
 .hero {
   display: grid;
-  gap: 0;
   overflow: hidden;
   border-radius: 8px;
   background-color: var(--color-primary);
@@ -289,7 +288,9 @@ main.wrapper {
   padding: 1rem;
 }
 
-.menu-item img {
+/* Shared image style for cards and the modal */
+.menu-item img,
+#modal-content img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -326,7 +327,6 @@ dialog {
   margin: auto;
   border: none;
   border-radius: 8px;
-  padding: 0;
   background-color: var(--color-white);
   color: var(--color-secondary);
   box-shadow: 0 4px 15px #0000004d;
@@ -356,14 +356,6 @@ dialog::backdrop {
 #modal-content {
   display: grid;
   gap: 0.5rem;
-}
-
-#modal-content img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center 30%;
-  border-radius: 6px;
 }
 
 /* Order page */
@@ -441,8 +433,17 @@ dialog::backdrop {
   list-style: none;
 }
 
+/* Long unbroken text (emails, notes) must never cause horizontal scroll */
+.summary-list li {
+  overflow-wrap: anywhere;
+}
+
 .text-block {
   max-width: 65ch;
+}
+
+.text-block h2 {
+  margin-top: 1.5rem;
 }
 
 .text-block p + p,

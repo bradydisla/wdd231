@@ -3,7 +3,8 @@ import { getMenuData, cardTemplate, errorTemplate } from './data.mjs';
 
 initCommonUI();
 
-const FEATURED_IDS = [1, 3, 9];
+// Four favorites so the grid fills evenly on every screen size
+const FEATURED_IDS = [1, 3, 9, 12];
 const featuredContainer = document.querySelector('#featured-cards');
 
 async function showFeatured() {
