@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/selah-house-monogram.png" type="image/png">
   <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/attributions.mjs"></script>
 </head>
 <body>
   <header class="site-header">
@@ -28,6 +30,17 @@
       <p class="site-name">Selah House</p>
     </div>
   </header>
+
+  <nav class="site-nav" aria-label="Main">
+    <div class="wrapper">
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Navigation menu"><span aria-hidden="true">☰</span></button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <main class="wrapper">
     <div class="text-block">
@@ -56,7 +69,8 @@
 
   <footer class="site-footer">
     <div class="wrapper footer-inner">
-      <p>© 2026 Brady Disla Martinez | Selah House</p>
+      <p>© <span id="current-year">2026</span> Brady Disla Martinez | Selah House</p>
+      <p><a href="https://youtu.be/TU_ID_DE_VIDEO" target="_blank" rel="noopener">Project demonstration video</a> | <a href="attributions.html">Attributions</a></p>
     </div>
   </footer>
 </body>
