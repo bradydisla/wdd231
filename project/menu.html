@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee, Tea and Food Menu | Selah House</title>
+  <meta name="description" content="Explore the full Selah House menu: coffee, tea and fresh-baked food. Filter by category or dairy-free options.">
+  <meta name="author" content="Brady Disla Martinez">
+
+  <meta property="og:title" content="Coffee, Tea and Food Menu | Selah House">
+  <meta property="og:description" content="Coffee, tea and fresh-baked food with dairy-free options.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Selah House">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://bradydisla.github.io/wdd231/project/images/selah-house-logo.png">
+  <meta property="og:url" content="https://bradydisla.github.io/wdd231/project/menu.html">
+
+  <link rel="icon" href="images/selah-house-monogram.png" type="image/png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/menu.mjs"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img class="logo" src="images/selah-house-logo.png" alt="Selah House logo" width="72" height="72">
+      <h1>Selah House Menu</h1>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main">
+    <div class="container">
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Navigation menu"><span aria-hidden="true">☰</span></button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Our menu</h2>
+
+    <div class="filters" role="group" aria-label="Filter the menu">
+      <button type="button" class="btn-filter" data-category="all" aria-pressed="false">All</button>
+      <button type="button" class="btn-filter" data-category="coffee" aria-pressed="false">Coffee</button>
+      <button type="button" class="btn-filter" data-category="tea" aria-pressed="false">Tea</button>
+      <button type="button" class="btn-filter" data-category="food" aria-pressed="false">Food</button>
+      <button type="button" class="btn-filter" data-category="dairy-free" aria-pressed="false">🌱 Dairy-free</button>
+    </div>
+
+    <p id="result-count" class="result-count" role="status"></p>
+
+    <div id="menu-cards" class="grid-cards"></div>
+
+    <dialog id="item-modal" aria-labelledby="modal-title">
+      <div class="modal-inner">
+        <button type="button" id="close-modal" class="modal-close" aria-label="Close details">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Brady Disla Martinez | Selah House</p>
+      <p><a href="https://youtu.be/TU_ID_DE_VIDEO" target="_blank" rel="noopener">Project demonstration video</a> | <a href="attributions.html">Attributions</a></p>
+    </div>
+  </footer>
+</body>
+</html>

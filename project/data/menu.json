@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "name": "Iced Vanilla Oat Latte",
+    "category": "coffee",
+    "price": 5.50,
+    "dairyFree": true,
+    "temperature": "cold",
+    "description": "Handcrafted espresso blended with our house vanilla syrup and creamy oat milk over ice.",
+    "image": "images/iced-vanilla.webp"
+  },
+  {
+    "id": 2,
+    "name": "Selah House Roast",
+    "category": "coffee",
+    "price": 3.75,
+    "dairyFree": true,
+    "temperature": "hot",
+    "description": "Our signature roast with notes of dark chocolate, walnut and a smooth finish.",
+    "image": "images/house-hoast.webp"
+  },
+  {
+    "id": 3,
+    "name": "Honey Lavender Cappuccino",
+    "category": "coffee",
+    "price": 5.25,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Double espresso with steamed milk infused with natural lavender and local honey.",
+    "image": "images/honey-lavender-cappuccino.webp"
+  },
+  {
+    "id": 4,
+    "name": "Cold Brew Cream",
+    "category": "coffee",
+    "price": 4.85,
+    "dairyFree": false,
+    "temperature": "cold",
+    "description": "Coffee cold-extracted for 18 hours and served with our house-whipped sweet cream.",
+    "image": "images/cream-cold-brew.webp"
+  },
+  {
+    "id": 5,
+    "name": "Matcha Cloud Latte",
+    "category": "tea",
+    "price": 5.75,
+    "dairyFree": true,
+    "temperature": "cold",
+    "description": "Grade A ceremonial matcha with almond milk and cold vanilla foam.",
+    "image": "images/matcha-cloud-latte.webp"
+  },
+  {
+    "id": 6,
+    "name": "Chai Tea Latte",
+    "category": "tea",
+    "price": 4.95,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Black tea spiced with cinnamon, cardamom and ginger, steamed with whole milk.",
+    "image": "images/chai-tea-latte.webp"
+  },
+  {
+    "id": 7,
+    "name": "Hibiscus Berry Iced Tea",
+    "category": "tea",
+    "price": 4.25,
+    "dairyFree": true,
+    "temperature": "cold",
+    "description": "Refreshing infusion of hibiscus flower, fresh red berries and a touch of lemon.",
+    "image": "images/hibiscus-berry-iced-tea.webp"
+  },
+  {
+    "id": 8,
+    "name": "Earl Grey Fog",
+    "category": "tea",
+    "price": 4.50,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Earl Grey tea with bergamot, vanilla essence and warm frothy milk.",
+    "image": "images/earl-grey-fog.webp"
+  },
+  {
+    "id": 9,
+    "name": "Avocado Sourdough Toast",
+    "category": "food",
+    "price": 8.50,
+    "dairyFree": true,
+    "temperature": "hot",
+    "description": "Toasted sourdough bread, mashed avocado, cherry tomatoes and chili flakes.",
+    "image": "images/avocado-toast-sourdough.webp"
+  },
+  {
+    "id": 10,
+    "name": "Artisan Butter Croissant",
+    "category": "food",
+    "price": 3.95,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Flaky croissant baked daily with high-quality French butter.",
+    "image": "images/artisan-butter-croissant.webp"
+  },
+  {
+    "id": 11,
+    "name": "Blueberry Lemon Scone",
+    "category": "food",
+    "price": 4.25,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Tender scone packed with fresh blueberries and a light, tart lemon glaze.",
+    "image": "images/blueberry-lemon-scone.webp"
+  },
+  {
+    "id": 12,
+    "name": "Vegan Granola Bowl",
+    "category": "food",
+    "price": 7.25,
+    "dairyFree": true,
+    "temperature": "cold",
+    "description": "Coconut yogurt, house-made nut granola and sliced seasonal fruit.",
+    "image": "images/vegan-granola-bowl.webp"
+  },
+  {
+    "id": 13,
+    "name": "Espresso Tonic",
+    "category": "coffee",
+    "price": 4.75,
+    "dairyFree": true,
+    "temperature": "cold",
+    "description": "Double shot of espresso poured over citrus tonic water with a lime wheel.",
+    "image": "images/espresso-tonic.webp"
+  },
+  {
+    "id": 14,
+    "name": "Mocha Latte",
+    "category": "coffee",
+    "price": 5.50,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Concentrated espresso with organic cocoa powder and creamy steamed milk.",
+    "image": "images/mocha-latte.webp"
+  },
+  {
+    "id": 15,
+    "name": "Cinnamon Roll",
+    "category": "food",
+    "price": 4.75,
+    "dairyFree": false,
+    "temperature": "hot",
+    "description": "Warm cinnamon roll with creamy cream cheese glaze and pecans.",
+    "image": "images/cinnamon-roll.webp"
+  }
+]

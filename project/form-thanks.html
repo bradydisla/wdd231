@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Received | Selah House</title>
+  <meta name="description" content="Summary of your pickup order at Selah House.">
+  <meta name="author" content="Brady Disla Martinez">
+
+  <meta property="og:title" content="Order Received | Selah House">
+  <meta property="og:description" content="Summary of your pickup order at Selah House.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Selah House">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://bradydisla.github.io/wdd231/project/images/selah-house-logo.png">
+  <meta property="og:url" content="https://bradydisla.github.io/wdd231/project/form-thanks.html">
+
+  <link rel="icon" href="images/selah-house-monogram.png" type="image/png">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script type="module" src="scripts/thanks.mjs"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <img class="logo" src="images/selah-house-logo.png" alt="Selah House logo" width="72" height="72">
+      <h1>Order received</h1>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main">
+    <div class="container">
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Navigation menu"><span aria-hidden="true">☰</span></button>
+      <ul id="nav-list" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h2>Thank you for your order</h2>
+    <p id="thanks-text" class="prose">We're getting everything ready for your arrival. Here is the information you sent:</p>
+
+    <ul id="order-summary" class="summary-list"></ul>
+
+    <p id="summary-empty" class="prose" hidden>There is no order to show yet. <a href="order.html">Fill out the order form</a>.</p>
+
+    <p><a href="index.html">Back to home</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year">2026</span> Brady Disla Martinez | Selah House</p>
+      <p><a href="https://youtu.be/TU_ID_DE_VIDEO" target="_blank" rel="noopener">Project demonstration video</a> | <a href="attributions.html">Attributions</a></p>
+    </div>
+  </footer>
+</body>
+</html>
